@@ -1,8 +1,10 @@
 import express, {Request, Response} from "express";
+import cors from "cors";
 
 const Vigenere = require('caesar-salad').Vigenere;
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 const port = 8000;
 
